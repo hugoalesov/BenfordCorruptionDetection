@@ -1,0 +1,29 @@
+# Dataset (too large for git)
+source/data/
+source/frames/
+
+# Claude
+.claude/
+
+# Manifest (paths are machine-specific)
+source/scripts/manifest.csv
+
+# Dummy images
+source/notebooks/dummy-images/clean/
+source/notebooks/dummy-images/corrupted/
+
+# Generated CSVs and models
+source/code/csv/
+source/code/models/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Notebook outputs (optional — remove if you want to keep them)
+source/notebooks/features.csv
+source/notebooks/features-no-quant.csv
