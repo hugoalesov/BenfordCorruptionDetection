@@ -1,8 +1,5 @@
 import os
 import sys
-from threading import Thread
-import time
-import webbrowser
 
 from flask import Flask, render_template, request, send_from_directory
 from werkzeug.utils import secure_filename
@@ -99,9 +96,4 @@ def detectar_corrupcion(image_path):
 
 
 if __name__ == "__main__":
-    def open_browser():
-        time.sleep(1)
-        webbrowser.open("http://localhost:5001")
-
-    Thread(target=open_browser).start()
     app.run(host="0.0.0.0", port=5001)

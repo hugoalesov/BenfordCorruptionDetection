@@ -9,3 +9,4 @@ opencv-python
 jupyterlab
 scikit-learn
 PyWavelets
+flask
