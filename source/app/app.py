@@ -87,12 +87,10 @@ def detectar_corrupcion(image_path):
     X = pd.DataFrame(flattened, columns=FEATURE_COLUMNS)
 
     prediction = int(model.predict(X)[0])
-    proba = model.predict_proba(X)[0]
-    prob_corrupta = round(float(proba[1]) * 100, 2)
 
     if prediction == 1:
-        return f"Imagen corrupta ({prob_corrupta} % de probabilidad de corrupción)"
-    return f"Imagen limpia ({round(100 - prob_corrupta, 2)} % de probabilidad de estar limpia)"
+        return "Imagen corrupta"
+    return "Imagen limpia"
 
 
 if __name__ == "__main__":
